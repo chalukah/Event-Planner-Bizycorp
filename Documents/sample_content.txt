@@ -1,0 +1,258 @@
+
+File: Questions for the Panel_.docx
+================================================================================
+Total paragraphs: 73
+
+
+--- Paragraph 0 ---
+Style: Title
+Alignment: LEFT
+Text: Rhonda Bell - Questions
+Runs: 2
+  Run 0: font=Arial, size=26.0pt, bold=False, italic=False
+          text='Rhonda Bell - Questions'
+
+--- Paragraph 1 ---
+Style: normal
+Alignment: None
+Text: Hi Rhonda,
+Runs: 1
+  Run 0: font=Georgia, size=13.0pt, bold=None, italic=None
+          text='Hi Rhonda,'
+Format: space_before=152400, space_after=152400
+        left_indent=None, first_line=None
+
+--- Paragraph 2 ---
+Style: normal
+Alignment: None
+Text: I’ve drafted these sets of questions for you in preparation for the upcoming panel discussion, “When...
+Runs: 3
+  Run 0: font=Georgia, size=13.0pt, bold=None, italic=None
+  Run 1: font=Georgia, size=13.0pt, bold=None, italic=True
+  Run 2: font=Georgia, size=13.0pt, bold=None, italic=None
+Format: space_before=152400, space_after=152400
+        left_indent=None, first_line=None
+
+--- Paragraph 3 ---
+Style: normal
+Alignment: None
+Text: If the questions meet your approval, kindly reply to this email confirming the questions. If you’d l...
+Runs: 1
+  Run 0: font=Georgia, size=13.0pt, bold=None, italic=None
+Format: space_before=152400, space_after=152400
+        left_indent=None, first_line=None
+
+--- Paragraph 4 ---
+Style: normal
+Alignment: None
+Text: Looking forward to your feedback!
+Runs: 1
+  Run 0: font=Georgia, size=13.0pt, bold=None, italic=None
+          text='Looking forward to your feedback!'
+Format: space_before=152400, space_after=152400
+        left_indent=None, first_line=None
+
+--- Paragraph 5 ---
+Style: normal
+Alignment: None
+Text: Please note: 05 questions will be directed to you during the panel. Each panelist will be assigned 0...
+Runs: 3
+  Run 0: font=Georgia, size=13.0pt, bold=True, italic=None
+  Run 1: font=Georgia, size=13.0pt, bold=None, italic=None
+          text='
+'
+Format: space_before=152400, space_after=152400
+        left_indent=None, first_line=None
+
+--- Paragraph 6 ---
+Style: normal
+Alignment: None
+Text: As both a Certified Veterinary Practice Manager and Digital Marketing Strategist, how do you see tec...
+Runs: 1
+  Run 0: font=Georgia, size=13.0pt, bold=None, italic=None
+Format: space_before=152400, space_after=0
+        left_indent=457200, first_line=-228600
+
+--- Paragraph 7 ---
+Style: normal
+Alignment: None
+Text: From your experience, where do you think practices cross the line from “helpful automation” to “losi...
+Runs: 1
+  Run 0: font=Georgia, size=13.0pt, bold=None, italic=None
+Format: space_before=0, space_after=0
+        left_indent=457200, first_line=-228600
+
+--- Paragraph 8 ---
+Style: normal
+Alignment: None
+Text: How can veterinary practices effectively train staff to integrate digital tools—like automated remin...
+Runs: 1
+  Run 0: font=Georgia, size=13.0pt, bold=None, italic=None
+Format: space_before=0, space_after=0
+        left_indent=457200, first_line=-228600
+
+--- Paragraph 9 ---
+Style: normal
+Alignment: None
+Text: What are some practical strategies you recommend to balance digital efficiency with personalized cli...
+Runs: 1
+  Run 0: font=Georgia, size=13.0pt, bold=None, italic=None
+Format: space_before=0, space_after=0
+        left_indent=457200, first_line=-228600
+
+--- Paragraph 10 ---
+Style: normal
+Alignment: None
+Text: In your coaching and consulting work, how do you help veterinary leaders evaluate which technologies...
+Runs: 1
+  Run 0: font=Georgia, size=13.0pt, bold=None, italic=None
+Format: space_before=0, space_after=152400
+        left_indent=457200, first_line=-228600
+
+--- Paragraph 11 ---
+Style: normal
+Alignment: None
+Text: (empty)
+
+================================================================================
+
+
+File: Promotional Matetrials_.docx
+================================================================================
+Total paragraphs: 84
+
+
+--- Paragraph 0 ---
+Style: Title
+Alignment: LEFT
+Text: Rhonda Bell
+Runs: 2
+  Run 0: font=Arial, size=26.0pt, bold=False, italic=False
+          text='Rhonda Bell'
+
+--- Paragraph 1 ---
+Style: normal
+Alignment: None
+Text: (empty)
+
+--- Paragraph 2 ---
+Style: normal
+Alignment: None
+Text: Hi Rhonda,
+Runs: 1
+  Run 0: font=Spartan, size=10.0pt, bold=None, italic=None
+          text='Hi Rhonda,'
+
+--- Paragraph 3 ---
+Style: normal
+Alignment: None
+Text: (empty)
+
+--- Paragraph 4 ---
+Style: normal
+Alignment: None
+Text: We've developed the promotional material and updated the Zoom landing page!
+Runs: 1
+  Run 0: font=Spartan, size=10.0pt, bold=None, italic=None
+
+--- Paragraph 5 ---
+Style: normal
+Alignment: None
+Text: Unique Panelist Join Link
+Runs: 1
+
+--- Paragraph 6 ---
+Style: normal
+Alignment: None
+Text: You may have already received an invite from Michael Walker through “no-reply@zoom.us.”
+Runs: 1
+  Run 0: font=Spartan, size=10.0pt, bold=None, italic=None
+
+--- Paragraph 7 ---
+Style: normal
+Alignment: None
+Text: Please use this link to join the webinar on the day of the event. For your convenience, I've added i...
+Runs: 2
+  Run 0: font=Spartan, size=10.0pt, bold=None, italic=None
+
+--- Paragraph 8 ---
+Style: normal
+Alignment: None
+Text: (empty)
+
+--- Paragraph 9 ---
+Style: normal
+Alignment: None
+Text: Promotional Materials
+Runs: 1
+  Run 0: font=Spartan, size=10.0pt, bold=True, italic=None
+          text='Promotional Materials'
+
+--- Paragraph 10 ---
+Style: normal
+Alignment: None
+Text: This is your Unique Registration Link: LINK
+Runs: 2
+  Run 0: font=Spartan, size=10.0pt, bold=None, italic=None
+          text='This is your Unique Registration Link: '
+
+--- Paragraph 11 ---
+Style: normal
+Alignment: None
+Text: To help spread the word, we’ve prepared a set of promotional materials, including graphics, captions...
+Runs: 1
+  Run 0: font=Spartan, size=10.0pt, bold=None, italic=None
+
+================================================================================
+
+
+File: Amanda Landis-Hanna - Promotional Matirials_.docx
+================================================================================
+Total paragraphs: 90
+
+
+--- Paragraph 0 ---
+Style: Title
+Alignment: LEFT
+Text: Promo 01
+Runs: 2
+  Run 0: font=Arial, size=26.0pt, bold=False, italic=False
+          text='Promo 01'
+
+--- Paragraph 1 ---
+Style: normal
+Alignment: None
+Text: Unique registration Link: 
+
+https://us02web.zoom.us/w/81314758372?tk=gw7-qJyMdAntLXLTWkE9x8CD0J-IEHX...
+Runs: 4
+  Run 0: font=Merriweather, size=None, bold=None, italic=None
+          text='Unique registration Link: '
+  Run 1: font=Merriweather, size=None, bold=None, italic=None
+          text='
+'
+  Run 2: font=Merriweather, size=None, bold=None, italic=None
+          text='
+'
+Format: space_before=152400, space_after=152400
+        left_indent=None, first_line=None
+
+--- Paragraph 2 ---
+Style: normal
+Alignment: None
+Text: (empty)
+
+--- Paragraph 3 ---
+Style: normal
+Alignment: None
+Traceback (most recent call last):
+  File "C:\Users\Bizycorp_Work\Documents\CLaude Vet\extract_samples.py", line 60, in <module>
+    show_document_sample(fpath, num_paragraphs=12)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Bizycorp_Work\Documents\CLaude Vet\extract_samples.py", line 27, in show_document_sample
+    print(f"Text: {para.text[:100]}{'...' if len(para.text) > 100 else ''}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2728' in position 6: character maps to <undefined>

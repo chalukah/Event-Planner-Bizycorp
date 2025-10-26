@@ -1,0 +1,66 @@
+Zoom Landing
+Topic: [PANEL_TOPIC]
+🐾 [PANEL_SERIES_NAME]
+[PANEL_HEADLINE]
+📅 Date: [PANEL_DATE]
+🕗 Time: [PANEL_TIME_RANGE]
+💻 Platform: [PANEL_PLATFORM]
+🎙 Format: [PANEL_FORMAT]
+About the Event
+[ABOUT_EVENT_PARAGRAPH]
+[SUPPORT_PARAGRAPH]
+What You'll Learn
+🐾 [KEY_TAKEAWAY_1]
+🐾 [KEY_TAKEAWAY_2]
+🐾 [KEY_TAKEAWAY_3]
+🐾 [KEY_TAKEAWAY_4]
+🐾 [KEY_TAKEAWAY_5]
+Why Attend?
+✅ [ATTENDEE_BENEFIT_1]
+✅ [ATTENDEE_BENEFIT_2]
+✅ [ATTENDEE_BENEFIT_3]
+🩺 [CLOSING_INVITE_LINE]
+👉 [PRIMARY_CTA_LINE]
+Primary CTA URL: [PRIMARY_CTA_URL]
+Secondary CTA (Optional): [SECONDARY_CTA_LINE]
+Secondary CTA URL: [SECONDARY_CTA_URL]
+
+Speaker 1
+Full Name - [S1_FULL_NAME]
+Contact Number - [S1_CONTACT_NUMBER]
+Current Position & Organization - [S1_POSITION_ORGANIZATION]
+Email Address - [S1_EMAIL]
+Unique Registration Link - [S1_TRACKING_LINK]
+Graphic Folder - [S1_GRAPHIC_FOLDER_LINK]
+
+Short Bio (3–4 sentences) - 
+[S1_SHORT_BIO]
+Promo Checklist
+[ ] Graphics shared with [S1_FIRST_NAME]
+[ ] Captions approved by [S1_FIRST_NAME]
+[ ] Email draft sent to [S1_FIRST_NAME]
+[ ] Join link tested
+[ ] Reminder scheduled
+Notes & Follow-Ups
+[S1_NOTES]
+
+Speaker 2
+Full Name - [S2_FULL_NAME]
+Contact Number - [S2_CONTACT_NUMBER]
+Current Position & Organization - [S2_POSITION_ORGANIZATION]
+Email Address - [S2_EMAIL]
+Unique Registration Link - [S2_TRACKING_LINK]
+Graphic Folder - [S2_GRAPHIC_FOLDER_LINK]
+
+Short Bio (3–4 sentences) - 
+[S2_SHORT_BIO]
+Promo Checklist
+[ ] Graphics shared with [S2_FIRST_NAME]
+[ ] Captions approved by [S2_FIRST_NAME]
+[ ] Email draft sent to [S2_FIRST_NAME]
+[ ] Join link tested
+[ ] Reminder scheduled
+Notes & Follow-Ups
+[S2_NOTES]
+Tab 3
+[ADDITIONAL_SECTION_CONTENT]

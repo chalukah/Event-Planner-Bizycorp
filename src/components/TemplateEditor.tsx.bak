@@ -1,0 +1,499 @@
+import { useState, useEffect, useCallback, useRef } from 'react';
+import {
+  Save,
+  Copy,
+  FileDown,
+  RotateCcw,
+  Printer,
+  Code,
+  Eye,
+  FileText,
+  Bold,
+  Italic,
+  Underline,
+  List,
+  ListOrdered,
+  Link as LinkIcon,
+  Undo,
+  Redo
+} from 'lucide-react';
+import { useStore, DateGroup, Template } from '../store';
+import { copyTextWithFallback } from '../utils/clipboard';
+import { downloadText } from '../utils/download';
+import { PreviewPane } from './PreviewPane';
+import { MergeTagsPanel } from './MergeTagsPanel';
+
+type TemplateEditorProps = {
+  dateGroup: DateGroup;
+};
+
+export function TemplateEditor({ dateGroup }: TemplateEditorProps) {
+  const selectedTemplateId = useStore((s) => s.ui.selectedTemplateId);
+  const selectTemplate = useStore((s) => s.selectTemplate);
+  const updateTemplate = useStore((s) => s.updateTemplate);
+  const markTemplateClean = useStore((s) => s.markTemplateClean);
+  const dirtyTemplates = useStore((s) => s.dirtyTemplates);
+  const showToast = useStore((s) => s.showToast);
+  const renameTemplate = useStore((s) => s.renameTemplate);
+
+  const [viewMode, setViewMode] = useState<'split' | 'editor' | 'preview'>('split');
+  const [showMergeTags, setShowMergeTags] = useState(true);
+  const [localContent, setLocalContent] = useState('');
+  const [hasUnsavedChanges, setHasUnsavedChanges] = useState(false);
+
+  const saveTimeoutRef = useRef<NodeJS.Timeout>();
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
+
+  const sortedTemplates = [...dateGroup.templates].sort((a, b) => a.sort - b.sort);
+  const currentTemplate = sortedTemplates.find((t) => t.id === selectedTemplateId) || sortedTemplates[0];
+
+  useEffect(() => {
+    if (!selectedTemplateId && sortedTemplates.length > 0) {
+      selectTemplate(sortedTemplates[0].id);
+    }
+  }, [selectedTemplateId, sortedTemplates, selectTemplate]);
+
+  useEffect(() => {
+    if (currentTemplate) {
+      setLocalContent(currentTemplate.content);
+      setHasUnsavedChanges(false);
+    }
+  }, [currentTemplate?.id]);
+
+  const saveContent = useCallback(() => {
+    if (!currentTemplate || localContent === currentTemplate.content) return;
+
+    updateTemplate(dateGroup.id, currentTemplate.id, { content: localContent });
+    setHasUnsavedChanges(false);
+
+    setTimeout(() => {
+      markTemplateClean(currentTemplate.id);
+    }, 1000);
+
+    showToast('Saved', 'success');
+  }, [currentTemplate, localContent, dateGroup.id, updateTemplate, markTemplateClean, showToast]);
+
+  useEffect(() => {
+    if (!currentTemplate) return;
+
+    if (localContent !== currentTemplate.content) {
+      setHasUnsavedChanges(true);
+      if (saveTimeoutRef.current) {
+        clearTimeout(saveTimeoutRef.current);
+      }
+      saveTimeoutRef.current = setTimeout(saveContent, 1200);
+    }
+
+    return () => {
+      if (saveTimeoutRef.current) {
+        clearTimeout(saveTimeoutRef.current);
+      }
+    };
+  }, [localContent, currentTemplate, saveContent]);
+
+  const handleContentChange = (content: string) => {
+    setLocalContent(content);
+  };
+
+  const handleCopy = async () => {
+    const success = await copyTextWithFallback(localContent);
+    if (success) {
+      showToast('Template copied', 'success');
+    } else {
+      showToast('Failed to copy', 'error');
+    }
+  };
+
+  const handleExport = () => {
+    if (!currentTemplate) return;
+    const json = JSON.stringify(
+      {
+        id: currentTemplate.id,
+        name: currentTemplate.name,
+        type: currentTemplate.type,
+        content: localContent,
+        updatedAt: new Date().toISOString()
+      },
+      null,
+      2
+    );
+    downloadText(`${currentTemplate.name}.json`, json, 'application/json');
+    showToast('Template exported', 'success');
+  };
+
+  const handlePrint = () => {
+    window.print();
+  };
+
+  const handleRename = () => {
+    if (!currentTemplate) return;
+    const newName = prompt('Enter new name:', currentTemplate.name);
+    if (newName && newName !== currentTemplate.name) {
+      renameTemplate(dateGroup.id, currentTemplate.id, newName);
+      showToast('Template renamed', 'success');
+    }
+  };
+
+  const handleToggleType = () => {
+    if (!currentTemplate) return;
+    const newType = currentTemplate.type === 'html' ? 'md' : 'html';
+    updateTemplate(dateGroup.id, currentTemplate.id, { type: newType });
+    showToast(`Switched to ${newType.toUpperCase()}`, 'success');
+  };
+
+  const insertTag = (tag: string) => {
+    if (!textareaRef.current) return;
+    const textarea = textareaRef.current;
+    const start = textarea.selectionStart;
+    const end = textarea.selectionEnd;
+    const before = localContent.substring(0, start);
+    const after = localContent.substring(end);
+    const newContent = before + tag + after;
+    setLocalContent(newContent);
+
+    setTimeout(() => {
+      textarea.focus();
+      textarea.selectionStart = textarea.selectionEnd = start + tag.length;
+    }, 0);
+  };
+
+  const formatText = (type: string) => {
+    if (!textareaRef.current) return;
+    const textarea = textareaRef.current;
+    const start = textarea.selectionStart;
+    const end = textarea.selectionEnd;
+    const selectedText = localContent.substring(start, end);
+
+    if (!selectedText) return;
+
+    let formattedText = selectedText;
+    let offsetStart = 0;
+    let offsetEnd = 0;
+
+    if (currentTemplate?.type === 'html') {
+      switch (type) {
+        case 'bold':
+          formattedText = `<strong>${selectedText}</strong>`;
+          offsetStart = 8;
+          offsetEnd = 9;
+          break;
+        case 'italic':
+          formattedText = `<em>${selectedText}</em>`;
+          offsetStart = 4;
+          offsetEnd = 5;
+          break;
+        case 'underline':
+          formattedText = `<u>${selectedText}</u>`;
+          offsetStart = 3;
+          offsetEnd = 4;
+          break;
+        case 'h1':
+          formattedText = `<h1>${selectedText}</h1>`;
+          offsetStart = 4;
+          offsetEnd = 5;
+          break;
+        case 'h2':
+          formattedText = `<h2>${selectedText}</h2>`;
+          offsetStart = 4;
+          offsetEnd = 5;
+          break;
+        case 'ul':
+          formattedText = `<ul>\n  <li>${selectedText}</li>\n</ul>`;
+          offsetStart = 11;
+          offsetEnd = 12;
+          break;
+        case 'ol':
+          formattedText = `<ol>\n  <li>${selectedText}</li>\n</ol>`;
+          offsetStart = 11;
+          offsetEnd = 12;
+          break;
+        case 'link':
+          const url = prompt('Enter URL:');
+          if (url) {
+            formattedText = `<a href="${url}">${selectedText}</a>`;
+            offsetStart = 9 + url.length;
+            offsetEnd = 4;
+          } else {
+            return;
+          }
+          break;
+      }
+    } else {
+      // Markdown
+      switch (type) {
+        case 'bold':
+          formattedText = `**${selectedText}**`;
+          offsetStart = 2;
+          offsetEnd = 2;
+          break;
+        case 'italic':
+          formattedText = `*${selectedText}*`;
+          offsetStart = 1;
+          offsetEnd = 1;
+          break;
+        case 'h1':
+          formattedText = `# ${selectedText}`;
+          offsetStart = 2;
+          break;
+        case 'h2':
+          formattedText = `## ${selectedText}`;
+          offsetStart = 3;
+          break;
+        case 'ul':
+          formattedText = `- ${selectedText}`;
+          offsetStart = 2;
+          break;
+        case 'ol':
+          formattedText = `1. ${selectedText}`;
+          offsetStart = 3;
+          break;
+        case 'link':
+          const url = prompt('Enter URL:');
+          if (url) {
+            formattedText = `[${selectedText}](${url})`;
+            offsetStart = 1;
+            offsetEnd = 3 + url.length;
+          } else {
+            return;
+          }
+          break;
+      }
+    }
+
+    const before = localContent.substring(0, start);
+    const after = localContent.substring(end);
+    const newContent = before + formattedText + after;
+    setLocalContent(newContent);
+
+    setTimeout(() => {
+      textarea.focus();
+      textarea.selectionStart = start + offsetStart;
+      textarea.selectionEnd = start + formattedText.length - offsetEnd;
+    }, 0);
+  };
+
+  if (!currentTemplate) {
+    return null;
+  }
+
+  const isDirty = dirtyTemplates.has(currentTemplate.id) || hasUnsavedChanges;
+
+  return (
+    <div className="h-full flex flex-col bg-white dark:bg-slate-900">
+      {/* Template Tabs */}
+      <div className="border-b border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 overflow-x-auto no-print">
+        <div className="flex items-center px-4 min-w-max">
+          {sortedTemplates.map((template) => (
+            <button
+              key={template.id}
+              onClick={() => selectTemplate(template.id)}
+              onDoubleClick={handleRename}
+              className={`relative px-4 py-3 text-sm font-medium transition-colors border-b-2 ${
+                template.id === currentTemplate.id
+                  ? 'border-blue-600 text-blue-600 dark:text-blue-400 bg-white dark:bg-slate-900'
+                  : 'border-transparent text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100'
+              }`}
+            >
+              {template.name}
+              {dirtyTemplates.has(template.id) && (
+                <span className="absolute top-2 right-2 w-1.5 h-1.5 bg-orange-500 rounded-full" />
+              )}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Toolbar */}
+      <div className="flex items-center justify-between px-4 py-2 border-b border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 no-print">
+        <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1 px-2 py-1 bg-slate-100 dark:bg-slate-700 rounded">
+            <button
+              onClick={() => formatText('bold')}
+              className="p-1.5 hover:bg-slate-200 dark:hover:bg-slate-600 rounded transition-colors"
+              title="Bold"
+            >
+              <Bold className="w-4 h-4" />
+            </button>
+            <button
+              onClick={() => formatText('italic')}
+              className="p-1.5 hover:bg-slate-200 dark:hover:bg-slate-600 rounded transition-colors"
+              title="Italic"
+            >
+              <Italic className="w-4 h-4" />
+            </button>
+            {currentTemplate.type === 'html' && (
+              <button
+                onClick={() => formatText('underline')}
+                className="p-1.5 hover:bg-slate-200 dark:hover:bg-slate-600 rounded transition-colors"
+                title="Underline"
+              >
+                <Underline className="w-4 h-4" />
+              </button>
+            )}
+          </div>
+
+          <div className="flex items-center gap-1 px-2 py-1 bg-slate-100 dark:bg-slate-700 rounded">
+            <button
+              onClick={() => formatText('h1')}
+              className="px-2 py-1.5 hover:bg-slate-200 dark:hover:bg-slate-600 rounded transition-colors text-xs font-bold"
+              title="Heading 1"
+            >
+              H1
+            </button>
+            <button
+              onClick={() => formatText('h2')}
+              className="px-2 py-1.5 hover:bg-slate-200 dark:hover:bg-slate-600 rounded transition-colors text-xs font-bold"
+              title="Heading 2"
+            >
+              H2
+            </button>
+          </div>
+
+          <div className="flex items-center gap-1 px-2 py-1 bg-slate-100 dark:bg-slate-700 rounded">
+            <button
+              onClick={() => formatText('ul')}
+              className="p-1.5 hover:bg-slate-200 dark:hover:bg-slate-600 rounded transition-colors"
+              title="Bulleted list"
+            >
+              <List className="w-4 h-4" />
+            </button>
+            <button
+              onClick={() => formatText('ol')}
+              className="p-1.5 hover:bg-slate-200 dark:hover:bg-slate-600 rounded transition-colors"
+              title="Numbered list"
+            >
+              <ListOrdered className="w-4 h-4" />
+            </button>
+            <button
+              onClick={() => formatText('link')}
+              className="p-1.5 hover:bg-slate-200 dark:hover:bg-slate-600 rounded transition-colors"
+              title="Insert link"
+            >
+              <LinkIcon className="w-4 h-4" />
+            </button>
+          </div>
+
+          <button
+            onClick={handleToggleType}
+            className={`flex items-center gap-2 px-3 py-1.5 rounded transition-colors ${
+              currentTemplate.type === 'html'
+                ? 'bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300'
+                : 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300'
+            }`}
+            title="Toggle HTML/Markdown"
+          >
+            <Code className="w-4 h-4" />
+            {currentTemplate.type.toUpperCase()}
+          </button>
+        </div>
+
+        <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1 px-2 py-1 bg-slate-100 dark:bg-slate-700 rounded">
+            <button
+              onClick={() => setViewMode('editor')}
+              className={`p-1.5 rounded transition-colors ${
+                viewMode === 'editor' ? 'bg-white dark:bg-slate-600' : 'hover:bg-slate-200 dark:hover:bg-slate-600'
+              }`}
+              title="Editor only"
+            >
+              <FileText className="w-4 h-4" />
+            </button>
+            <button
+              onClick={() => setViewMode('split')}
+              className={`p-1.5 rounded transition-colors ${
+                viewMode === 'split' ? 'bg-white dark:bg-slate-600' : 'hover:bg-slate-200 dark:hover:bg-slate-600'
+              }`}
+              title="Split view"
+            >
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 4v16m6-16v16M4 9h16M4 15h16" />
+              </svg>
+            </button>
+            <button
+              onClick={() => setViewMode('preview')}
+              className={`p-1.5 rounded transition-colors ${
+                viewMode === 'preview' ? 'bg-white dark:bg-slate-600' : 'hover:bg-slate-200 dark:hover:bg-slate-600'
+              }`}
+              title="Preview only"
+            >
+              <Eye className="w-4 h-4" />
+            </button>
+          </div>
+
+          {isDirty && (
+            <span className="text-xs text-orange-600 dark:text-orange-400 font-medium">
+              Unsaved
+            </span>
+          )}
+
+          <button
+            onClick={saveContent}
+            disabled={!isDirty}
+            className="flex items-center gap-2 px-3 py-1.5 bg-blue-600 text-white rounded hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            title="Save (Ctrl/Cmd + S)"
+          >
+            <Save className="w-4 h-4" />
+            Save
+          </button>
+
+          <button
+            onClick={handleCopy}
+            className="p-1.5 hover:bg-slate-100 dark:hover:bg-slate-700 rounded transition-colors"
+            title="Copy template"
+          >
+            <Copy className="w-4 h-4" />
+          </button>
+
+          <button
+            onClick={handleExport}
+            className="p-1.5 hover:bg-slate-100 dark:hover:bg-slate-700 rounded transition-colors"
+            title="Export template"
+          >
+            <FileDown className="w-4 h-4" />
+          </button>
+
+          <button
+            onClick={handlePrint}
+            className="p-1.5 hover:bg-slate-100 dark:hover:bg-slate-700 rounded transition-colors"
+            title="Print"
+          >
+            <Printer className="w-4 h-4" />
+          </button>
+        </div>
+      </div>
+
+      {/* Editor and Preview */}
+      <div className="flex-1 flex overflow-hidden">
+        {(viewMode === 'editor' || viewMode === 'split') && (
+          <div className={viewMode === 'split' ? 'flex-1 flex' : 'flex-1 flex'}>
+            <div className="flex-1 flex flex-col">
+              <textarea
+                ref={textareaRef}
+                value={localContent}
+                onChange={(e) => handleContentChange(e.target.value)}
+                className="flex-1 w-full p-4 font-mono text-sm resize-none focus:outline-none bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100"
+                placeholder="Enter your content here..."
+                spellCheck={false}
+              />
+            </div>
+            {showMergeTags && (
+              <div className="w-64 border-l border-slate-200 dark:border-slate-700">
+                <MergeTagsPanel onInsertTag={insertTag} />
+              </div>
+            )}
+          </div>
+        )}
+
+        {viewMode === 'split' && (
+          <div className="w-1 bg-slate-200 dark:bg-slate-700" />
+        )}
+
+        {(viewMode === 'preview' || viewMode === 'split') && (
+          <div className={viewMode === 'split' ? 'flex-1' : 'flex-1'}>
+            <PreviewPane content={localContent} type={currentTemplate.type} />
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}

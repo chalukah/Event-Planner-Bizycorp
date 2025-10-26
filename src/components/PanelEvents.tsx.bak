@@ -1,0 +1,29 @@
+import { useStore } from '../store';
+import { TemplateEditor } from './TemplateEditor';
+
+export function PanelEvents() {
+  const selectedDateId = useStore((s) => s.ui.selectedDateId);
+  const panelEvents = useStore((s) => s.panelEvents);
+
+  const selectedDate = panelEvents.find((d) => d.id === selectedDateId);
+
+  if (!selectedDate) {
+    return (
+      <div className="h-full flex items-center justify-center bg-slate-50 dark:bg-slate-900/50">
+        <div className="text-center max-w-md px-4">
+          <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
+            <svg className="w-8 h-8 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 className="text-lg font-semibold mb-2">No Date Selected</h3>
+          <p className="text-sm text-slate-600 dark:text-slate-400 mb-4">
+            Select a date from the sidebar or create a new one to start working with templates.
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  return <TemplateEditor dateGroup={selectedDate} />;
+}

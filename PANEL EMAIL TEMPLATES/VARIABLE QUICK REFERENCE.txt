@@ -1,0 +1,161 @@
+================================================================================
+PANEL EMAIL TEMPLATES - VARIABLE QUICK REFERENCE
+================================================================================
+
+📋 COPY THIS LIST FOR EACH NEW PANEL EVENT
+
+When creating a new panel event, gather this information and use find/replace
+to update all variables in the templates.
+
+================================================================================
+PANELIST-SPECIFIC VARIABLES (Unique for Each Panelist)
+================================================================================
+
+PANELIST 1:
+-----------
+[PANELIST_FIRST_NAME] =
+[PANELIST_FULL_NAME] =
+[PANELIST_ZOOM_JOIN_LINK] =
+[PANELIST_REGISTRATION_TRACKING_LINK] =
+[PROMOTIONAL_MATERIALS_DOC_LINK] =
+[FINAL_BANNER_LINK] =
+
+Questions for Panelist 1:
+[QUESTION_1] =
+[QUESTION_2] =
+[QUESTION_3] =
+[QUESTION_4] =
+[QUESTION_5] =
+
+PANELIST 2:
+-----------
+[PANELIST_FIRST_NAME] =
+[PANELIST_FULL_NAME] =
+[PANELIST_ZOOM_JOIN_LINK] =
+[PANELIST_REGISTRATION_TRACKING_LINK] =
+[PROMOTIONAL_MATERIALS_DOC_LINK] =
+[FINAL_BANNER_LINK] =
+
+Questions for Panelist 2:
+[QUESTION_1] =
+[QUESTION_2] =
+[QUESTION_3] =
+[QUESTION_4] =
+[QUESTION_5] =
+
+PANELIST 3 (if applicable):
+-----------
+[PANELIST_FIRST_NAME] =
+[PANELIST_FULL_NAME] =
+[PANELIST_ZOOM_JOIN_LINK] =
+[PANELIST_REGISTRATION_TRACKING_LINK] =
+[PROMOTIONAL_MATERIALS_DOC_LINK] =
+[FINAL_BANNER_LINK] =
+
+Questions for Panelist 3:
+[QUESTION_1] =
+[QUESTION_2] =
+[QUESTION_3] =
+[QUESTION_4] =
+[QUESTION_5] =
+
+================================================================================
+EVENT-SPECIFIC VARIABLES (Same for All Panelists)
+================================================================================
+
+Panel Information:
+------------------
+[PANEL_TITLE] =
+[PANEL_SUBTITLE] =
+[PANEL_PURPOSE] =
+
+Event Dates:
+------------
+[EVENT_DATE] = (Example: October 29th)
+[EVENT_DATE_FULL] = (Example: Wednesday, October 29th, 2025)
+[EVENT_DATE_SHORT] = (Example: 29th)
+[EVENT_DATE_MINUS_1] = (Example: October 28th)
+
+Discussion Points:
+------------------
+[DISCUSSION_POINT_1] =
+[DISCUSSION_POINT_2] =
+[DISCUSSION_POINT_3] =
+[DISCUSSION_POINT_4] =
+[DISCUSSION_POINT_5] =
+
+Brief Descriptions:
+-------------------
+[BRIEF_PANEL_TOPIC_DESCRIPTION] =
+(Short summary like: "recruitment, retention, and rebuilding teams")
+
+================================================================================
+POST-EVENT VARIABLES (Fill After Event)
+================================================================================
+
+[RECORDING_LINK] = (Add after recording is processed)
+
+For Each Panelist:
+------------------
+Panelist 1:
+[X] = (Number of registrations they brought)
+[ATTENDEE_LIST_LINK] = (Only if they brought 10+)
+[BRIEF_PANELIST_CONTRIBUTION_SUMMARY] =
+(Example: "recruitment strategies, burnout prevention, and career pathways")
+
+Panelist 2:
+[X] =
+[ATTENDEE_LIST_LINK] =
+[BRIEF_PANELIST_CONTRIBUTION_SUMMARY] =
+
+Panelist 3:
+[X] =
+[ATTENDEE_LIST_LINK] =
+[BRIEF_PANELIST_CONTRIBUTION_SUMMARY] =
+
+================================================================================
+SENDING SCHEDULE TEMPLATE
+================================================================================
+
+Create this schedule when panel is confirmed:
+
+E-22 (Initial Invitation):      ___/___/2025 - RESHANI
+E-20 (Follow-up):                ___/___/2025 - RESHANI
+E-13 (Confirmation):             ___/___/2025 - RESHANI (send when confirmed)
+E-10 (Promotional Materials):    ___/___/2025 - CHALUKA
+E-10 (Questions):                ___/___/2025 - CHALUKA (same day or next)
+E-6 (Boost Registrations):       ___/___/2025 - CHALUKA
+E-5 (Help Reach More):           ___/___/2025 - CHALUKA
+E-4 (3 Days Reminder):           ___/___/2025 - CHALUKA
+E-2 (Tomorrow Panel):            ___/___/2025 - CHALUKA
+E-1 (Today is Day):              ___/___/2025 - CHALUKA (event day morning)
+E-DAY (Starting in 2 Hours):     ___/___/2025 - CHALUKA (6:00 PM EST)
+E-DAY (Starting Now):            ___/___/2025 - CHALUKA (7:45 PM EST)
+E+1 (Thank You + Recording):     ___/___/2025 - CHALUKA (day after event)
+
+================================================================================
+QUICK CHECKLIST
+================================================================================
+
+Before First Send:
+☐ All variables filled in above
+☐ Zoom webinar created
+☐ Unique join links obtained for each panelist
+☐ Registration tracking links created for each panelist
+☐ Promotional materials docs created for each panelist
+☐ Questions drafted and approved by panelists
+
+Before Each Email:
+☐ All [VARIABLES] replaced
+☐ Hyperlinks tested
+☐ Correct panelist name
+☐ CC: liyanna.ekwa@gmail.com, reshani.thrivingdentist@gmail.com
+☐ Subject line added
+
+After Event:
+☐ Registration counts checked
+☐ Recording link obtained
+☐ Attendee lists created (for 10+ panelists)
+☐ Conditional sections removed based on registration count
+
+================================================================================
