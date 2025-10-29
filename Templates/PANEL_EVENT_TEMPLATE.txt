@@ -1,0 +1,33 @@
+# VBI Panel Event Template
+# Fill in the details below and upload this file to auto-populate the event creation form
+# Lines starting with # are comments and will be ignored
+
+# BASIC EVENT INFORMATION
+Event Name: October 2025 Workforce Crisis Panel
+Panel Title: Veterinary Talent Solutions Panel: The Workforce Crisis
+Panel Subtitle: Real Strategies to Recruit, Retain, and Rebuild Veterinary Teams
+Panel Purpose: This webinar is designed to help veterinary practice owners and managers overcome the industry's most pressing workforce challenges by learning proven recruitment strategies, retention techniques, and team-building approaches from experienced veterinary business leaders.
+
+# DATE INFORMATION
+Event Date: 2025-10-29
+Event Date Full: Tuesday, October 29, 2025
+Event Date Short: Oct 29
+Event Date Minus 1: October 28, 2025
+
+# BRIEF DESCRIPTION (for promotional materials)
+Brief Topic Description: Join us for an expert panel discussion on solving the veterinary workforce crisis with actionable strategies for recruitment, retention, and team rebuilding.
+
+# DISCUSSION POINTS (exactly 5 required)
+Discussion Point 1: How to attract top veterinary talent in a competitive market
+Discussion Point 2: Proven retention strategies beyond compensation
+Discussion Point 3: Building a positive workplace culture that reduces turnover
+Discussion Point 4: Effective onboarding processes for new veterinary team members
+Discussion Point 5: Leveraging technology and flexible work arrangements to retain staff
+
+# NOTES:
+# - All fields are required
+# - Discussion points must be exactly 5 items
+# - Event Date must be in YYYY-MM-DD format
+# - Event Date Full should include day of week
+# - Keep Panel Title concise (under 100 characters recommended)
+# - Panel Purpose should be 2-3 sentences explaining the value proposition

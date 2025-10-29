@@ -1,0 +1,26 @@
+# UNSTRUCTURED FORMAT EXAMPLE
+# The parser can also extract data from unstructured text like emails or briefs
+# This shows what a typical email or brief might look like
+
+Hey team,
+
+I'm planning our next panel event for the Veterinary Business Institute. Here are the details:
+
+**Topic:** Financial Management for Veterinary Practices: Beyond the Bottom Line
+
+We're calling it "Veterinary Finance Mastery Panel" and the subtitle is "Strategic Financial Planning for Long-Term Practice Success"
+
+**Date:** December 10, 2025 (Tuesday) at 8:00 PM EST
+
+This webinar is designed to help veterinary practice owners and financial managers master strategic financial planning, understand key financial metrics, optimize cash flow, and make data-driven decisions that ensure long-term profitability and sustainable growth.
+
+**What You'll Learn:**
+- Understanding key financial metrics every practice owner should track daily
+- Cash flow optimization strategies for seasonal fluctuations
+- Profitability analysis: identifying high-margin services and reducing waste
+- Strategic pricing: how to set fees that reflect value without losing clients
+- Financial forecasting and budgeting for expansion and growth
+
+The brief description for social media: "Master the financial strategies that separate thriving veterinary practices from struggling ones, with insights from experienced practice owners and financial experts."
+
+Let me know if you need anything else!

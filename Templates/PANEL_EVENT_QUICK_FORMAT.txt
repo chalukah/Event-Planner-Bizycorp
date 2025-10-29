@@ -1,0 +1,17 @@
+# QUICK FORMAT - Minimal Template
+# Just fill in these fields with your event details
+
+Event Name: [Your Event Name]
+Panel Title: [Main Event Title]
+Panel Subtitle: [Subtitle or Tagline]
+Panel Purpose: [2-3 sentences about what attendees will learn]
+Event Date: YYYY-MM-DD
+Event Date Full: [Day, Month DD, YYYY]
+Event Date Short: [Mon DD]
+Event Date Minus 1: [Month DD, YYYY]
+Brief Topic Description: [One sentence summary]
+Discussion Point 1: [First key topic]
+Discussion Point 2: [Second key topic]
+Discussion Point 3: [Third key topic]
+Discussion Point 4: [Fourth key topic]
+Discussion Point 5: [Fifth key topic]

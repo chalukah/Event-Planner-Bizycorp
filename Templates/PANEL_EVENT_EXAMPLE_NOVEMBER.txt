@@ -1,0 +1,24 @@
+# VBI Panel Event Template - November 2025 Example
+# This is a complete example for a November 2025 panel event
+
+# BASIC EVENT INFORMATION
+Event Name: November 2025 Marketing Excellence Panel
+Panel Title: Veterinary Marketing Mastery: Digital Strategies That Convert
+Panel Subtitle: Proven Digital Marketing Tactics to Grow Your Veterinary Practice
+Panel Purpose: This webinar is designed to help veterinary practice owners and marketing managers master modern digital marketing strategies that drive new client acquisition, improve online reputation, and maximize return on marketing investment through expert insights and proven tactics.
+
+# DATE INFORMATION
+Event Date: 2025-11-18
+Event Date Full: Tuesday, November 18, 2025
+Event Date Short: Nov 18
+Event Date Minus 1: November 17, 2025
+
+# BRIEF DESCRIPTION
+Brief Topic Description: Discover cutting-edge digital marketing strategies specifically tailored for veterinary practices, from SEO and social media to online reputation management and conversion optimization.
+
+# DISCUSSION POINTS
+Discussion Point 1: SEO strategies that get veterinary practices to the top of Google search results
+Discussion Point 2: Social media content that engages pet owners and drives appointment bookings
+Discussion Point 3: Online reputation management: turning reviews into your biggest marketing asset
+Discussion Point 4: Email marketing automation for client retention and reactivation
+Discussion Point 5: Measuring marketing ROI: which metrics matter and how to track them effectively

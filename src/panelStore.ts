@@ -3,6 +3,7 @@ import { persist } from 'zustand/middleware';
 import type { PanelEvent, Panelist, GeneratedEmail, EventChecklist, EventPanelTracker } from './types';
 import { EMAIL_TEMPLATES } from './data/emailTemplates';
 import { replaceVariables, processConditionalSections, generateSubjectLine } from './utils/templateEngine';
+import { wrapEmailContent, extractEmailContent, createSignature } from './utils/emailTemplateWrapper';
 import { EVENT_CHECKLIST_SEEDS } from './data/eventChecklistTemplate';
 
 type UIState = {
@@ -249,12 +250,29 @@ export const usePanelStore = create<PanelStore>()(
           if (template.perPanelist) {
             // Generate one email per panelist
             event.panelists.forEach((panelist) => {
-              let htmlContent = replaceVariables(template.template, event, panelist);
+              let content = replaceVariables(template.template, event, panelist);
 
               // Handle conditional sections for E+1 Thank You email
               if (template.code === 'E+1') {
-                htmlContent = processConditionalSections(htmlContent, panelist.registrationCount);
+                content = processConditionalSections(content, panelist.registrationCount);
               }
+
+              // Extract content from old template format
+              const emailContent = extractEmailContent(content);
+
+              // Determine wrapper options based on template
+              const includeNoteBox = template.code === 'QUESTIONS';
+              const includeQuestionList = template.code === 'QUESTIONS';
+
+              // Generate filename for title
+              const emailTitle = `${template.name} - ${panelist.fullName}`;
+
+              // Wrap in modern template
+              const htmlContent = wrapEmailContent(emailContent, {
+                title: emailTitle,
+                includeNoteBox,
+                includeQuestionList,
+              });
 
               generatedEmails.push({
                 id: crypto.randomUUID(),
@@ -267,7 +285,20 @@ export const usePanelStore = create<PanelStore>()(
             });
           } else {
             // Generate one email for all panelists
-            const htmlContent = replaceVariables(template.template, event);
+            let content = replaceVariables(template.template, event);
+
+            // Extract content from old template format
+            const emailContent = extractEmailContent(content);
+
+            // Generate filename for title
+            const emailTitle = `${template.name} - All Panelists`;
+
+            // Wrap in modern template
+            const htmlContent = wrapEmailContent(emailContent, {
+              title: emailTitle,
+              includeNoteBox: false,
+              includeQuestionList: false,
+            });
 
             generatedEmails.push({
               id: crypto.randomUUID(),
@@ -305,11 +336,30 @@ export const usePanelStore = create<PanelStore>()(
           ? event.panelists.find((p) => p.id === email.panelistId)
           : undefined;
 
-        let htmlContent = replaceVariables(template.template, event, panelist);
+        let content = replaceVariables(template.template, event, panelist);
 
         if (template.code === 'E+1' && panelist) {
-          htmlContent = processConditionalSections(htmlContent, panelist.registrationCount);
+          content = processConditionalSections(content, panelist.registrationCount);
         }
+
+        // Extract content from old template format
+        const emailContent = extractEmailContent(content);
+
+        // Determine wrapper options based on template
+        const includeNoteBox = template.code === 'QUESTIONS';
+        const includeQuestionList = template.code === 'QUESTIONS';
+
+        // Generate filename for title
+        const emailTitle = panelist
+          ? `${template.name} - ${panelist.fullName}`
+          : `${template.name} - All Panelists`;
+
+        // Wrap in modern template
+        const htmlContent = wrapEmailContent(emailContent, {
+          title: emailTitle,
+          includeNoteBox,
+          includeQuestionList,
+        });
 
         set((state) => ({
           panelEvents: state.panelEvents.map((e) =>
