@@ -1,0 +1,41 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='600' height='320' role='img' aria-labelledby='title desc'>
+<title id='title'>October veterinary panel performance</title>
+<desc id='desc'>Bar chart comparing registrants and unique attendees for panels on October 2, October 8, and October 13.</desc>
+<rect x='0' y='0' width='600' height='320' fill='white' stroke='#d1d5db'/>
+<line x1='80' y1='280' x2='560' y2='280' stroke='#374151' stroke-width='1'/>
+<line x1='80' y1='280' x2='80' y2='60' stroke='#374151' stroke-width='1'/>
+<text x='300' y='24' text-anchor='middle' font-family='Segoe UI' font-size='16' fill='#111827'>October Veterinary Panels: Registrants vs. Unique Attendees</text>
+<line x1='75' y1='280.0' x2='80' y2='280.0' stroke='#9ca3af' stroke-width='1'/>
+<text x='70' y='284.0' text-anchor='end' font-family='Segoe UI' font-size='11' fill='#4b5563'>0</text>
+<line x1='75' y1='246.66666666666666' x2='80' y2='246.66666666666666' stroke='#9ca3af' stroke-width='1'/>
+<text x='70' y='250.66666666666666' text-anchor='end' font-family='Segoe UI' font-size='11' fill='#4b5563'>2</text>
+<line x1='75' y1='213.33333333333331' x2='80' y2='213.33333333333331' stroke='#9ca3af' stroke-width='1'/>
+<text x='70' y='217.33333333333331' text-anchor='end' font-family='Segoe UI' font-size='11' fill='#4b5563'>4</text>
+<line x1='75' y1='180.0' x2='80' y2='180.0' stroke='#9ca3af' stroke-width='1'/>
+<text x='70' y='184.0' text-anchor='end' font-family='Segoe UI' font-size='11' fill='#4b5563'>6</text>
+<line x1='75' y1='146.66666666666666' x2='80' y2='146.66666666666666' stroke='#9ca3af' stroke-width='1'/>
+<text x='70' y='150.66666666666666' text-anchor='end' font-family='Segoe UI' font-size='11' fill='#4b5563'>8</text>
+<line x1='75' y1='113.33333333333331' x2='80' y2='113.33333333333331' stroke='#9ca3af' stroke-width='1'/>
+<text x='70' y='117.33333333333331' text-anchor='end' font-family='Segoe UI' font-size='11' fill='#4b5563'>10</text>
+<line x1='75' y1='80.0' x2='80' y2='80.0' stroke='#9ca3af' stroke-width='1'/>
+<text x='70' y='84.0' text-anchor='end' font-family='Segoe UI' font-size='11' fill='#4b5563'>12</text>
+<rect x='430' y='60' width='12' height='12' fill='#2563eb'/>
+<text x='448' y='70' font-family='Segoe UI' font-size='12' fill='#111827'>Registrants</text>
+<rect x='430' y='80' width='12' height='12' fill='#10b981'/>
+<text x='448' y='90' font-family='Segoe UI' font-size='12' fill='#111827'>Unique attendees</text>
+<rect x='50.0' y='80.0' width='30' height='200.0' fill='#2563eb'/>
+<text x='65.0' y='75.0' text-anchor='middle' font-family='Segoe UI' font-size='11' fill='#1f2937'>12</text>
+<rect x='80.0' y='196.66666666666666' width='30' height='83.33333333333334' fill='#10b981'/>
+<text x='95.0' y='191.66666666666666' text-anchor='middle' font-family='Segoe UI' font-size='11' fill='#1f2937'>5</text>
+<text x='80' y='298' text-anchor='middle' font-family='Segoe UI' font-size='12' fill='#111827'>Oct 2</text>
+<rect x='130.0' y='180.0' width='30' height='100.0' fill='#2563eb'/>
+<text x='145.0' y='175.0' text-anchor='middle' font-family='Segoe UI' font-size='11' fill='#1f2937'>6</text>
+<rect x='160.0' y='180.0' width='30' height='100.0' fill='#10b981'/>
+<text x='175.0' y='175.0' text-anchor='middle' font-family='Segoe UI' font-size='11' fill='#1f2937'>6</text>
+<text x='160' y='298' text-anchor='middle' font-family='Segoe UI' font-size='12' fill='#111827'>Oct 8</text>
+<rect x='210.0' y='280.0' width='30' height='0.0' fill='#2563eb'/>
+<text x='225.0' y='275.0' text-anchor='middle' font-family='Segoe UI' font-size='11' fill='#1f2937'>0</text>
+<rect x='240.0' y='280.0' width='30' height='0.0' fill='#10b981'/>
+<text x='255.0' y='275.0' text-anchor='middle' font-family='Segoe UI' font-size='11' fill='#1f2937'>0</text>
+<text x='240' y='298' text-anchor='middle' font-family='Segoe UI' font-size='12' fill='#111827'>Oct 13</text>
+</svg>

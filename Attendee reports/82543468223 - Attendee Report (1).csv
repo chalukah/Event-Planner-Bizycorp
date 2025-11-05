@@ -1,0 +1,26 @@
+Attendee Report,
+Report generated time,"Oct 02, 2025 10:55 PM"
+Topic,Webinar ID,Actual Start Time,Actual Duration (minutes),# Registrants,# Cancelled registrants,Unique Viewers,Total Users,Max Concurrent Views,Enable Registration
+"Her Voice in Veterinary Medicine: Leadership, Growth & Impact",825 4346 8223,"Sep 18, 2025 4:51 PM",73,9,0,3,12,3,Yes
+Panelist Details,
+Attended,User Name (Original Name),Email,Join Time,Leave Time,Time in Session (minutes),Is Guest,Country/Region Name
+Yes,shahina,shahina@ekwa.com,"Sep 18, 2025 16:53:10","Sep 18, 2025 18:03:21",71,Yes,Sri Lanka
+Yes,Lori M Teller,snoopydoc@gmail.com,"Sep 18, 2025 16:54:28","Sep 18, 2025 17:59:12",65,Yes,United States
+Yes,Lori M Teller,snoopydoc@gmail.com,"Sep 18, 2025 17:59:49","Sep 18, 2025 18:03:18",4,Yes,United States
+Yes,Mary E. Mongioi,MMongioi@ForchelliLaw.com,"Sep 18, 2025 16:51:03","Sep 18, 2025 18:03:17",73,Yes,United States
+Yes,Tracy Sheffield,tracysheff@gmail.com,"Sep 18, 2025 16:51:07","Sep 18, 2025 18:03:20",73,Yes,United States
+Yes,Dr. Jennifer Edwards,jennifer@drjenniferedwards.com,"Sep 18, 2025 16:58:09","Sep 18, 2025 18:03:18",66,Yes,United States
+Yes,Paula Parker,PParker@avma.org,"Sep 18, 2025 16:51:04","Sep 18, 2025 18:03:17",73,Yes,United States
+Yes,Adeesha Pemananda,adeesha.p.ekwa@gmail.com,"Sep 18, 2025 16:51:03","Sep 18, 2025 18:03:21",73,No,Sri Lanka
+Attendee Details,
+Attended,User Name (Original Name),First Name,Last Name,Email,Country/Region,Phone,Job Title,Questions & Comments,Registration Time,Approval Status,Join Time,Leave Time,Time in Session (minutes),Is Guest,Practice Website (Optional),Role (Mandatory): ,Country/Region Name,Source Name
+Yes,Emily Iacobucci,Emily,Iacobucci,Trailbreakervet@gmail.com,US,5098793666,Practice Owner/ Veterinarian,,"Sep 10, 2025 16:05:23",approved,"Sep 18, 2025 17:01:36","Sep 18, 2025 18:02:24",61,Yes,'@trailbreakervet.com,Practice Owner - Aesthetics,United States,Tracy Sheffield,
+Yes,Brianna Armstrong,Brianna,Armstrong,barmstrong@firehouse.vet,,8323877807,MD and hospital owner ,,"Sep 12, 2025 09:51:59",approved,"Sep 18, 2025 17:01:16","Sep 18, 2025 17:18:05",17,Yes,Firehouse183.com,"Other (Team Member, Front Desk)",United States, Lori M Teller,
+Yes,Brianna Armstrong,Brianna,Armstrong,barmstrong@firehouse.vet,,,,,,,"Sep 18, 2025 17:18:27","Sep 18, 2025 17:31:29",14,Yes,,,United States
+Yes,Colleen Best,Colleen,Best,Cbest.dvm@gmail.com,,,,,"Sep 12, 2025 17:07:55",approved,"Sep 18, 2025 17:13:45","Sep 18, 2025 17:52:26",39,Yes,Bestvet.com,Consultant,Canada, Lori M Teller,
+No,Emily,Emily,Singler,Emilysinglervmd@gmail.com,US,407 405-8543,Veterinarian,,"Sep 12, 2025 19:24:47",approved,--,--,--,--,Www.emilysinglervmd.com,"Other (Team Member, Front Desk)",United States, Lori M Teller,
+No,Tori,Tori,Lauro,tori.lauro@vca.com,US,8484480795,Hospital Manager,,"Sep 14, 2025 07:41:38",approved,--,--,--,--,Na ,Office Managers/Practice Manager,United States,Dr. Jennifer Edwards  ,
+No,Judy,Judy,Lanier,Judyroselanier@gmail.com,US,,,,"Sep 16, 2025 09:31:03",approved,--,--,--,--,AAHA.org,"Other (Team Member, Front Desk)",United States,Natalie L. Marks,
+No,Kalpesh,Kalpesh,Raval,Kalpesh_raval@hotmail.com,US,,,,"Sep 17, 2025 03:35:45",approved,--,--,--,--,Na,Industry & Vendors,United States,Natalie L. Marks,
+No,Eve,Eve,Levin,Eve.levin@att.net,US,3125338761,Veterinarian ,,"Sep 17, 2025 17:58:18",approved,--,--,--,--,NA,"Other (Team Member, Front Desk)",United States, Lori M Teller,
+No,Martha,Martha,Skipwith,Mskipwithesq@yahoo.com,US,,GC,,"Sep 18, 2025 10:35:13",approved,--,--,--,--,N/A,Industry & Vendors,United States,Natalie L. Marks,

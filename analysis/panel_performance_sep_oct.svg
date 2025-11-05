@@ -1,0 +1,80 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1290' height='455' role='img' aria-labelledby='title desc'>
+<title id='title'>Veterinary panel performance</title>
+<desc id='desc'>Bar chart comparing registrants and unique attendees across September and October panels.</desc>
+<rect x='0' y='0' width='1290' height='455' fill='white' stroke='#e5e7eb'/>
+<defs><linearGradient id='viz-bg' x1='0' x2='0' y1='0' y2='1'><stop offset='0%' stop-color='#f9fafb'/><stop offset='100%' stop-color='#ffffff'/></linearGradient></defs>
+<rect x='40' y='30' width='1090' height='350' fill='url(#viz-bg)' rx='18'/>
+<line x1='120' y1='370' x2='1050' y2='370' stroke='#9ca3af' stroke-width='1.4'/>
+<line x1='120' y1='370' x2='120' y2='58' stroke='#9ca3af' stroke-width='1.4'/>
+<text x='645.0' y='35' text-anchor='middle' font-family='Segoe UI' font-size='20' font-weight='600' fill='#111827'>Veterinary panels · Registrants vs Live attendees</text>
+<text x='645.0' y='58' text-anchor='middle' font-family='Segoe UI' font-size='13' fill='#4b5563'>Snapshot of September–October 2025 sessions</text>
+<line x1='108' y1='370.0' x2='1050' y2='370.0' stroke='#e5e7eb' stroke-width='1' stroke-dasharray='5 5'/>
+<line x1='112' y1='370.0' x2='120' y2='370.0' stroke='#9ca3af' stroke-width='1.1'/>
+<text x='106' y='374.0' text-anchor='end' font-family='Segoe UI' font-size='12' fill='#4b5563'>0</text>
+<line x1='108' y1='320.0' x2='1050' y2='320.0' stroke='#e5e7eb' stroke-width='1' stroke-dasharray='5 5'/>
+<line x1='112' y1='320.0' x2='120' y2='320.0' stroke='#9ca3af' stroke-width='1.1'/>
+<text x='106' y='324.0' text-anchor='end' font-family='Segoe UI' font-size='12' fill='#4b5563'>2</text>
+<line x1='108' y1='270.0' x2='1050' y2='270.0' stroke='#e5e7eb' stroke-width='1' stroke-dasharray='5 5'/>
+<line x1='112' y1='270.0' x2='120' y2='270.0' stroke='#9ca3af' stroke-width='1.1'/>
+<text x='106' y='274.0' text-anchor='end' font-family='Segoe UI' font-size='12' fill='#4b5563'>4</text>
+<line x1='108' y1='220.0' x2='1050' y2='220.0' stroke='#e5e7eb' stroke-width='1' stroke-dasharray='5 5'/>
+<line x1='112' y1='220.0' x2='120' y2='220.0' stroke='#9ca3af' stroke-width='1.1'/>
+<text x='106' y='224.0' text-anchor='end' font-family='Segoe UI' font-size='12' fill='#4b5563'>6</text>
+<line x1='108' y1='170.0' x2='1050' y2='170.0' stroke='#e5e7eb' stroke-width='1' stroke-dasharray='5 5'/>
+<line x1='112' y1='170.0' x2='120' y2='170.0' stroke='#9ca3af' stroke-width='1.1'/>
+<text x='106' y='174.0' text-anchor='end' font-family='Segoe UI' font-size='12' fill='#4b5563'>8</text>
+<line x1='108' y1='120.0' x2='1050' y2='120.0' stroke='#e5e7eb' stroke-width='1' stroke-dasharray='5 5'/>
+<line x1='112' y1='120.0' x2='120' y2='120.0' stroke='#9ca3af' stroke-width='1.1'/>
+<text x='106' y='124.0' text-anchor='end' font-family='Segoe UI' font-size='12' fill='#4b5563'>10</text>
+<line x1='108' y1='70.0' x2='1050' y2='70.0' stroke='#e5e7eb' stroke-width='1' stroke-dasharray='5 5'/>
+<line x1='112' y1='70.0' x2='120' y2='70.0' stroke='#9ca3af' stroke-width='1.1'/>
+<text x='106' y='74.0' text-anchor='end' font-family='Segoe UI' font-size='12' fill='#4b5563'>12</text>
+<rect x='1080' y='82' width='14' height='14' rx='3' fill='#4f46e5'/>
+<text x='1104' y='94' font-family='Segoe UI' font-size='13' fill='#1f2937'>Registrants</text>
+<rect x='1080' y='108' width='14' height='14' rx='3' fill='#0ea5e9'/>
+<text x='1104' y='120' font-family='Segoe UI' font-size='13' fill='#1f2937'>Unique attendees</text>
+<rect x='1080' y='134' width='14' height='14' rx='3' fill='#6366f1'/>
+<text x='1104' y='146' font-family='Segoe UI' font-size='13' fill='#1f2937'>Attendance rate</text>
+<rect x='82.0' y='270.0' width='38' height='100.0' fill='#4f46e5'/>
+<text x='101.0' y='260.0' text-anchor='middle' font-family='Segoe UI' font-size='12' font-weight='600' fill='#111827'>4</text>
+<rect x='120.0' y='220.0' width='38' height='150.0' fill='#0ea5e9'/>
+<text x='139.0' y='210.0' text-anchor='middle' font-family='Segoe UI' font-size='12' font-weight='600' fill='#111827'>6</text>
+<text x='120' y='400' text-anchor='middle' font-family='Segoe UI' font-size='13' fill='#111827'><tspan x='120' dy='0'>Sep 04 – Breaking Free</tspan></text>
+<text x='120' y='434' text-anchor='middle' font-family='Segoe UI' font-size='12' fill='#6366f1'>Attendance rate: 150%</text>
+<rect x='222.0' y='145.0' width='38' height='225.0' fill='#4f46e5'/>
+<text x='241.0' y='135.0' text-anchor='middle' font-family='Segoe UI' font-size='12' font-weight='600' fill='#111827'>9</text>
+<rect x='260.0' y='270.0' width='38' height='100.0' fill='#0ea5e9'/>
+<text x='279.0' y='260.0' text-anchor='middle' font-family='Segoe UI' font-size='12' font-weight='600' fill='#111827'>4</text>
+<text x='260' y='400' text-anchor='middle' font-family='Segoe UI' font-size='13' fill='#111827'><tspan x='260' dy='0'>Sep 18 – Her Voice</tspan></text>
+<text x='260' y='434' text-anchor='middle' font-family='Segoe UI' font-size='12' fill='#6366f1'>Attendance rate: 44%</text>
+<rect x='362.0' y='370.0' width='38' height='0.0' fill='#4f46e5'/>
+<text x='381.0' y='360.0' text-anchor='middle' font-family='Segoe UI' font-size='12' font-weight='600' fill='#111827'>0</text>
+<rect x='400.0' y='370.0' width='38' height='0.0' fill='#0ea5e9'/>
+<text x='419.0' y='360.0' text-anchor='middle' font-family='Segoe UI' font-size='12' font-weight='600' fill='#111827'>0</text>
+<text x='400' y='400' text-anchor='middle' font-family='Segoe UI' font-size='13' fill='#111827'><tspan x='400' dy='0'>Sep 24 – Leadership Gap</tspan></text>
+<text x='400' y='434' text-anchor='middle' font-family='Segoe UI' font-size='12' fill='#6366f1'>Attendance rate: —</text>
+<rect x='502.0' y='170.0' width='38' height='200.0' fill='#4f46e5'/>
+<text x='521.0' y='160.0' text-anchor='middle' font-family='Segoe UI' font-size='12' font-weight='600' fill='#111827'>8</text>
+<rect x='540.0' y='195.0' width='38' height='175.0' fill='#0ea5e9'/>
+<text x='559.0' y='185.0' text-anchor='middle' font-family='Segoe UI' font-size='12' font-weight='600' fill='#111827'>7</text>
+<text x='540' y='400' text-anchor='middle' font-family='Segoe UI' font-size='13' fill='#111827'><tspan x='540' dy='0'>Sep 29 – Client Experience</tspan></text>
+<text x='540' y='434' text-anchor='middle' font-family='Segoe UI' font-size='12' fill='#6366f1'>Attendance rate: 88%</text>
+<rect x='642.0' y='70.0' width='38' height='300.0' fill='#4f46e5'/>
+<text x='661.0' y='70' text-anchor='middle' font-family='Segoe UI' font-size='12' font-weight='600' fill='#111827'>12</text>
+<rect x='680.0' y='220.0' width='38' height='150.0' fill='#0ea5e9'/>
+<text x='699.0' y='210.0' text-anchor='middle' font-family='Segoe UI' font-size='12' font-weight='600' fill='#111827'>6</text>
+<text x='680' y='400' text-anchor='middle' font-family='Segoe UI' font-size='13' fill='#111827'><tspan x='680' dy='0'>Oct 02 – Membership Models</tspan></text>
+<text x='680' y='434' text-anchor='middle' font-family='Segoe UI' font-size='12' fill='#6366f1'>Attendance rate: 50%</text>
+<rect x='782.0' y='220.0' width='38' height='150.0' fill='#4f46e5'/>
+<text x='801.0' y='210.0' text-anchor='middle' font-family='Segoe UI' font-size='12' font-weight='600' fill='#111827'>6</text>
+<rect x='820.0' y='220.0' width='38' height='150.0' fill='#0ea5e9'/>
+<text x='839.0' y='210.0' text-anchor='middle' font-family='Segoe UI' font-size='12' font-weight='600' fill='#111827'>6</text>
+<text x='820' y='400' text-anchor='middle' font-family='Segoe UI' font-size='13' fill='#111827'><tspan x='820' dy='0'>Oct 08 – Culture &amp; Leadership</tspan></text>
+<text x='820' y='434' text-anchor='middle' font-family='Segoe UI' font-size='12' fill='#6366f1'>Attendance rate: 100%</text>
+<rect x='922.0' y='270.0' width='38' height='100.0' fill='#4f46e5'/>
+<text x='941.0' y='260.0' text-anchor='middle' font-family='Segoe UI' font-size='12' font-weight='600' fill='#111827'>4</text>
+<rect x='960.0' y='320.0' width='38' height='50.0' fill='#0ea5e9'/>
+<text x='979.0' y='310.0' text-anchor='middle' font-family='Segoe UI' font-size='12' font-weight='600' fill='#111827'>2</text>
+<text x='960' y='400' text-anchor='middle' font-family='Segoe UI' font-size='13' fill='#111827'><tspan x='960' dy='0'>Oct 30 – Talent Solutions</tspan></text>
+<text x='960' y='434' text-anchor='middle' font-family='Segoe UI' font-size='12' fill='#6366f1'>Attendance rate: 50%</text>
+</svg>

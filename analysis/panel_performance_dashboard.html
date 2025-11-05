@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Veterinary Panels Performance Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" integrity="sha256-1zj0juL3xsVhGus/1G2Tn2twCoKh6gKEeGoutgCAi3Y=" crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      padding: 24px;
+      background: #f8fafc;
+      color: #0f172a;
+    }
+    h1 {
+      margin-bottom: 4px;
+    }
+    h2 {
+      margin-top: 40px;
+      margin-bottom: 12px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+    }
+    th, td {
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 1px solid #e2e8f0;
+      font-size: 14px;
+    }
+    th {
+      background: #f1f5f9;
+      font-weight: 600;
+    }
+    caption {
+      text-align: left;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .note {
+      font-size: 13px;
+      color: #475569;
+      margin-top: 6px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Veterinary panels performance dashboard</h1>
+  <p class="note">Interactive summary of September–October 2025 sessions. Hover over the chart for details or review the table below.</p>
+  <div class="card">
+    <canvas id="panels-chart" height="120"></canvas>
+  </div>
+
+  <h2>Session breakdown</h2>
+  <div class="card">
+    <table>
+      <caption>Registrants and live attendance by session</caption>
+      <thead>
+        <tr>
+          <th scope="col">Date</th>
+          <th scope="col">Topic</th>
+          <th scope="col">Registrants</th>
+          <th scope="col">Unique attendees</th>
+          <th scope="col">Attendance %</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>2025-09-04</td><td>Breaking Free from Outdated Habits That Hold Back Veterinary Practices</td><td>4</td><td>6</td><td>150.0%</td></tr><tr><td>2025-09-18</td><td>Her Voice in Veterinary Medicine: Leadership, Growth &amp; Impact</td><td>9</td><td>4</td><td>44.4%</td></tr><tr><td>2025-09-24</td><td>Facing the Leadership Gap When No One on Your Team Wants to Step Up</td><td>0</td><td>0</td><td>0.0%</td></tr><tr><td>2025-09-29</td><td>Understanding What Pet Owners Really Think (Client Experience)</td><td>8</td><td>7</td><td>87.5%</td></tr><tr><td>2025-10-02</td><td>Membership &amp; Subscription Models: Creating Recurring Revenue</td><td>12</td><td>6</td><td>50.0%</td></tr><tr><td>2025-10-08</td><td>Veterinary Culture &amp; Leadership Panel : From Stuck to Thriving: Redefining Leadership, Communication, and Culture in Modern Veterinary Practices</td><td>6</td><td>6</td><td>100.0%</td></tr><tr><td>2025-10-30</td><td>Veterinary Talent Solutions Panel   The Workforce Crisis: Real Strategies to Recruit, Retain, and Rebuild Veterinary Teams</td><td>4</td><td>2</td><td>50.0%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    const ctx = document.getElementById('panels-chart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {"labels": ["Sep 04 \u2013 Breaking Free", "Sep 18 \u2013 Her Voice", "Sep 24 \u2013 Leadership Gap", "Sep 29 \u2013 Client Experience", "Oct 02 \u2013 Membership Models", "Oct 08 \u2013 Culture & Leadership", "Oct 30 \u2013 Talent Solutions"], "datasets": [{"label": "Registrants", "data": [4, 9, 0, 8, 12, 6, 4], "backgroundColor": "#4f46e5"}, {"label": "Unique attendees", "data": [6, 4, 0, 7, 6, 6, 2], "backgroundColor": "#0ea5e9"}, {"label": "Attendance %", "data": [150.0, 44.4, 0.0, 87.5, 50.0, 100.0, 50.0], "type": "line", "yAxisID": "percentageAxis", "borderColor": "#6366f1", "backgroundColor": "rgba(99,102,241,0.25)", "tension": 0.3, "pointRadius": 5, "fill": false}]},
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true,
+            title: {
+              display: true,
+              text: 'Count'
+            }
+          },
+          percentageAxis: {
+            beginAtZero: true,
+            position: 'right',
+            ticks: {
+              callback: (value) => value + '%'
+            },
+            grid: {
+              drawOnChartArea: false
+            }
+          }
+        },
+        plugins: {
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                if (context.dataset.label === 'Attendance %') {
+                  return context.dataset.label + ': ' + context.parsed.y + '%';
+                }
+                return context.dataset.label + ': ' + context.parsed.y;
+              }
+            }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
